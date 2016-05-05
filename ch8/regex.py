@@ -7,7 +7,7 @@ from pprint import pprint
 
 
 if __name__ == '__main__':
-    path_to_open='/home/paco/workspace/python-practice/ch8/'
+    path_to_open=os.getcwd()
     txtRegex = re.compile(r'.*\.txt')
 
     contents = os.listdir(path_to_open)
