@@ -6,7 +6,6 @@ import zipfile, os
 
 def backupToZip(folder):
     # Backup the entire contents of "folder" into a ZIP file.
-
     folder = os.path.abspath(folder)
 
     number = 1
@@ -20,7 +19,7 @@ def backupToZip(folder):
     print('Creating %s...' % (zipFilename))
     backupToZip = zipfile.ZipFile(zipFilename, 'w')
 
-    # TODO: walk the entire folder tree and compress the files into each folder
+    # Walk the entire folder tree and compress the files into each folder
     for foldername, subfolders, filenames in os.walk(folder):
         print('Adding files in %s...' % (foldername))
         # Add the current folder to the ZIP file.
@@ -34,4 +33,7 @@ def backupToZip(folder):
     backupToZip.close()
     print('Done.')
 
-backupToZip('/home/ecmartz/someDir')
+# Test bed
+#backupToZip('/home/ecmartz/someDir')
+# Cloud9
+backupToZip('/home/ubuntu/someDir')
