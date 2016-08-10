@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # backupToZip.py - Copies an entire folder and its contents into a ZIP files
 # whose filename increments.
 
