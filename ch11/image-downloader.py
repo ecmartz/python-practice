@@ -12,6 +12,10 @@ if __name__ == "__main__":
     # Get the src of an image
     # soup.findAll('a', 'image-list-link')[0].find('img')['src']
 
+    # Create the directory first
+    if not os.path.isdir("./{}".format(sys.argv[1])):
+        os.makedirs("./{}".format(sys.argv[1]))
+
     img_hrefs = []
     for i in soup.find_all('a', 'image-list-link'):
         img_href = 'http:'+str(i.find('img')['src'])
@@ -24,6 +28,5 @@ if __name__ == "__main__":
             img_file.write(chunk)
         img_file.close()
 
-    # TODO : Create the directory first
 
     # TODO : Could get higher res photos
